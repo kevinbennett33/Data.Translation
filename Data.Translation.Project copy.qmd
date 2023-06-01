@@ -19,14 +19,14 @@ install.packages("ipumsr")
 library(ipumsr)
 ddi <- read_ipums_ddi("cps_00002.xml")
 Translation.data <- read_ipums_micro(ddi)
-vtable(Translation.data)
 ```
 
 ```{r}
 # Mutate Data and add Column for Employment share by industry, per month, and a Cutoff Variable at 3.11.20
+vtable(Translation.data)
 
-test.tina <- "this is a tina push test"
 
-test.adam <- "this is a adam push test"
+```
 
+```{}
 ```
