@@ -39,6 +39,28 @@ print(Translation.data)
 ```
 
 ```{r}
+# Filter the 'Translation.data' dataset based on 'IND' column
+filtered_data <- Translation.data %>%
+  filter(IND >= 4000 & IND <= 6000)
+
+# Print the resulting filtered dataset
+print(filtered_data)
+```
+
+```{r}
+# Filter the 'Translation.data' dataset based on 'IND' and 'EMPSTAT' columns
+filtered_data <- Translation.data %>%
+  filter(IND == "retail" & EMPSTAT == "01")
+
+# Calculate the total number of employed individuals in the retail industry
+total_employed <- sum(filtered_data$EMPLOYMENT)
+
+# Print the total number of employed individuals in the retail industry
+print(total_employed)
+
+```
+
+```{r}
 # Mutate Data and add Column for Employment share by industry, per month, and a Cutoff Variable at 3.11.20
 
 test.tina <- "this is a tina push test"
